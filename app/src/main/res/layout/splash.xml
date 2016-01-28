@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cc_splashbw"
+    android:orientation="horizontal"
+    android:textAlignment="center"
+    android:weightSum="7"
+    android:id="@+id/appSplashPage"
+    android:hapticFeedbackEnabled="false">
+
+    <TextView
+        android:id="@+id/appNameSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/text1"
+        android:textAlignment="center"
+        android:textColor="#ff000000"
+        android:textSize="@android:dimen/notification_large_icon_height" />
+
+    <ProgressBar
+        android:id="@+id/loadingBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@id/appNameSpace"
+        android:layout_gravity="center_horizontal"
+        android:background="#ffffffff"
+        android:progress="@android:integer/config_mediumAnimTime" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Big Development"
+        android:id="@+id/companyName"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/appNameSpace"
+        android:layout_alignEnd="@+id/appNameSpace"
+        android:textColor="#1d1a1a"
+        android:paddingBottom="8dp" />
+
+</RelativeLayout>
