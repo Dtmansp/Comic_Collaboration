@@ -9,7 +9,7 @@ public class HowToPlay extends Activity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_how_to_play);
-            getActionBar().setDisplayHomeAsUpEnabled(true);
+            //getActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
 }
