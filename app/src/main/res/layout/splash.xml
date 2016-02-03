@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/cc_splashbw"
     android:orientation="horizontal"
+    android:screenOrientation="landscape"
     android:textAlignment="center"
     android:weightSum="7"
     android:id="@+id/appSplashPage"
