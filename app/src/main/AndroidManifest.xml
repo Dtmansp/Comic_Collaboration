@@ -22,9 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".WelcomeActivity">
-            <intent-filter>
+<!--            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity
             android:name=".terms_conditions"
@@ -58,6 +58,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dtman.comic_collaboration.LoginActivity" />
         </activity>
+        <!--#####################################################################################-->
+        <activity
+            android:name=".InGameActivity"
+            android:screenOrientation="landscape" >
+            <!--====================================================================================
+            TEST STUFF SO I CAN LOAD THE InGameActivity
+            -->
+<!--            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+            <!--=================================================================================-->
+        </activity>
+        <!--#####################################################################################-->
     </application>
 
 </manifest>
