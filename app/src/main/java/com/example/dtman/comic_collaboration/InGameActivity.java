@@ -214,7 +214,7 @@ public class InGameActivity extends AppCompatActivity
     //-ERASE BUTTON
     public void EraseButton(View v)
         {
-        if(erase != true)
+        if(!erase)
             {
             erase = true;
             drawView.setErase(true);
@@ -258,7 +258,7 @@ public class InGameActivity extends AppCompatActivity
         newDialog.show();
 
         //-TURN OFF ERASE IF ITS ON
-        if(erase == true)
+        if(erase)
             {
             drawView.setErase(false);
             }
@@ -343,7 +343,7 @@ public class InGameActivity extends AppCompatActivity
         decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                //| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
