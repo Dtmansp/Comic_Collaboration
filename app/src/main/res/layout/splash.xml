@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/cc_splashbw"
     android:orientation="horizontal"
     android:screenOrientation="landscape"
-    android:textAlignment="center"
     android:weightSum="7"
     android:id="@+id/appSplashPage"
     android:hapticFeedbackEnabled="false">
@@ -14,32 +15,43 @@
         android:id="@+id/appNameSpace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/text1"
-        android:textAlignment="center"
+        android:text="@string/app_name2"
         android:textColor="#ff000000"
-        android:textSize="@android:dimen/notification_large_icon_height" />
-
-    <ProgressBar
-        android:id="@+id/loadingBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_below="@id/appNameSpace"
-        android:layout_gravity="center_horizontal"
-        android:background="#ffffffff"
-        android:progress="@android:integer/config_mediumAnimTime" />
+        android:textSize="@android:dimen/app_icon_size"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Big Development"
+        android:text="@string/companyname"
         android:id="@+id/companyName"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/appNameSpace"
-        android:layout_alignEnd="@+id/appNameSpace"
         android:textColor="#1d1a1a"
-        android:paddingBottom="8dp" />
+        android:paddingBottom="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/appNameSpace"
+        android:layout_alignLeft="@+id/appNameSpace"
+        android:layout_alignStart="@+id/appNameSpace"
+        android:layout_marginLeft="162dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="44dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/cc_logo"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/progressBar"
+        android:layout_alignStart="@+id/progressBar" />
 
 </RelativeLayout>

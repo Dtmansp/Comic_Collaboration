@@ -22,19 +22,7 @@ public class WelcomeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome);
-        findViewById(R.id.buttonTerms).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(WelcomeActivity.this, terms_conditions.class));
-            }
-        });
-        findViewById(R.id.buttonHowToPlay).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(WelcomeActivity.this, HowToPlay.class));
-            }
-        });
-        findViewById(R.id.submit_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.welcomeSubmitInfoButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(WelcomeActivity.this, Login2Activity.class));

@@ -13,7 +13,8 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,33 +22,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WelcomeActivity">
+        <activity android:name=".WelcomeActivity"
+            android:screenOrientation="landscape">
 <!--            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>-->
         </activity>
         <activity
             android:name=".terms_conditions"
-            android:label="@string/title_activity_terms_conditions" />
+            android:label="@string/title_activity_terms_conditions"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".Account"
             android:label="@string/title_activity_account"
-            android:value="com.example.dtman.comic_collaboration.Account/>
+            android:value="com.example.dtman.comic_collaboration.Account"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".Report"
             android:label="@string/title_activity_report"
-            android:value="com.example.dtman.comic_collaboration.Report"/>
+            android:value="com.example.dtman.comic_collaboration.Report"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".Help"
             android:label="@string/title_activity_help"
-            android:value="com.example.dtman.comic_collaboration.Help"/>
+            android:value="com.example.dtman.comic_collaboration.Help"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:value="com.example.dtman.comic_collaboration.MainActivity"/>
+            android:value="com.example.dtman.comic_collaboration.MainActivity"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".HowToPlay"
             android:label="@string/title_activity_how_to_play"
+            android:screenOrientation="landscape"
             android:parentActivityName=".WelcomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -56,6 +64,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
+            android:screenOrientation="landscape"
             android:parentActivityName=".WelcomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
