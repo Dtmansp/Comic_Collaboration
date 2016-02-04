@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.dtman.comic_collaboration.app.Login2Activity;
+
 
 public class WelcomeActivity extends Activity {
 
@@ -35,7 +37,7 @@ public class WelcomeActivity extends Activity {
         findViewById(R.id.submit_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+                startActivity(new Intent(WelcomeActivity.this, Login2Activity.class));
             }
         });
     }

@@ -31,13 +31,16 @@
             android:label="@string/title_activity_terms_conditions" />
         <activity
             android:name=".Account"
-            android:label="@string/title_activity_account" />
+            android:label="@string/title_activity_account"
+            android:value="com.example.dtman.comic_collaboration.Account/>
         <activity
             android:name=".Report"
-            android:label="@string/title_activity_report" />
+            android:label="@string/title_activity_report"
+            android:value="com.example.dtman.comic_collaboration.Report"/>
         <activity
             android:name=".Help"
-            android:label="@string/title_activity_help" />
+            android:label="@string/title_activity_help"
+            android:value="com.example.dtman.comic_collaboration.Help"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
