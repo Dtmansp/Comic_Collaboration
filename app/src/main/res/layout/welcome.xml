@@ -54,8 +54,7 @@
         android:hint="enter your user name"
         android:layout_alignBottom="@+id/welcomeUsernameText"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:visibility="gone"/>
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -76,8 +75,7 @@
         android:layout_below="@+id/welcomeUsernameText"
         android:layout_alignLeft="@+id/welcomeUserNameEditText"
         android:layout_alignStart="@+id/welcomeUserNameEditText"
-        android:text="Password"
-        android:visibility="gone"/>
+        android:text="Password" />
 
     <Button
         android:layout_width="wrap_content"
@@ -85,7 +83,10 @@
         android:text="Submit"
         android:id="@+id/welcomeSubmitInfoButton"
         android:hint="you must agree to the terms and conditions of this app before signing in"
-        android:layout_alignBottom="@+id/editText4"
+        android:enabled="true"
+        android:layout_below="@+id/welcomePasswordEditText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignLeft="@+id/welcomePasswordText"
         android:layout_alignStart="@+id/welcomePasswordText" />
 
@@ -97,27 +98,29 @@
         android:layout_above="@+id/welcomePasswordText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:checked="false" />
+        android:checked="false"
+        android:hint="you must agree to the terms and conditions of this app before playing" />
     <EditText
         android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
         android:inputType="textPersonName"
-        android:text="@string/googleacct_text" />
+        android:text="@string/googleacct_text"
+        android:layout_above="@+id/editText4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText3"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/facebkacct_text" />
+        android:text="@string/facebkacct_text"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="41dp" />
 
 
 
