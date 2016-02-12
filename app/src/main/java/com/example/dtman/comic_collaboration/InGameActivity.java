@@ -1,6 +1,6 @@
 package com.example.dtman.comic_collaboration;
 /*
-===================================================================================================
+####################################################################################################
 INGAME ACTIVITY
 PURPOSE:
 Used for drawing and submitting a frame of the comic.
@@ -13,29 +13,27 @@ PROGRESS:
   Copied from the master and started making the drawing activity.
 - 1/31/16
   Copied all files and stuff to the CC app
-===================================================================================================
+####################################################################################################
  */
 //-IMPORTS:
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-
-//=================================================================================================
+//##################################################################################################
 //-START APP:
 public class InGameActivity extends AppCompatActivity
     {
-    //============================================================================================
+    //==============================================================================================
     //- VARIABLES:
     private Dialog chooseColorDLG;
     private Dialog brushChooserDLG;
 
     private float xsmallBrush, smallBrush, mediumBrush, largeBrush;
-    //private int currColor = 0xff000000; //-BLACK AS THE DEFAULT COLOR
+
     private ImageButton colorChooseBTN;
 
     private DrawingView drawView;
@@ -44,11 +42,11 @@ public class InGameActivity extends AppCompatActivity
 
     private View decorView;
 
-    //============================================================================================
+    //==============================================================================================
     @Override
     protected void onCreate(Bundle savedInstanceState)
         {
-        //---------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------
         //-NORMAL STUFF
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_game);
@@ -58,7 +56,7 @@ public class InGameActivity extends AppCompatActivity
         decorView = getWindow().getDecorView();
 
         makeFullScreen();
-        //---------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------
         colorChooseBTN = (ImageButton)
                 findViewById(R.id.paintColor_BUTTON);
 
@@ -70,7 +68,7 @@ public class InGameActivity extends AppCompatActivity
         drawView.setBrushSize(mediumBrush);
         }
 
-    //============================================================================================
+    //==============================================================================================
     //-WHEN THE USER PRESSES THE COLOR BUTTON SHOW THE AVAILABLE COLORS...
     public void ChooseColor(View v)
         {
@@ -80,13 +78,13 @@ public class InGameActivity extends AppCompatActivity
         chooseColorDLG.setTitle("Choose Color:");
         chooseColorDLG.setContentView(R.layout.iga_colorchooser);
         chooseColorDLG.show();
-        //-----------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------
         //-SETUP THE COLOR BUTTONS THAT THE USER CAN CHOOSE FROM
         ImageButton color1Btn = (ImageButton) chooseColorDLG.findViewById(R.id.color1);
         ImageButton color2Btn = (ImageButton) chooseColorDLG.findViewById(R.id.color2);
         ImageButton color3Btn = (ImageButton) chooseColorDLG.findViewById(R.id.color3);
         ImageButton color4Btn = (ImageButton) chooseColorDLG.findViewById(R.id.color4);
-        //-----------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------
         //-USER CHOSE THE 1ST COLOR (BLACK)
         color1Btn.setOnClickListener(new View.OnClickListener()
         {
@@ -133,7 +131,7 @@ public class InGameActivity extends AppCompatActivity
         });
         }
 
-    //--------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------
     //-USER CHOOSING THE COLOR THEY WANT...
     public void ColorSelected(View v)
         {
@@ -145,7 +143,7 @@ public class InGameActivity extends AppCompatActivity
         //chooseColorDLG.hide();
         }
 
-    //============================================================================================
+    //==============================================================================================
     //-WHEN THE USER PRESSES THE BRUSH BUTTON SHOW THE AVAILABLE SIZES...
     public void ChooseBrushSize(View v)
         {
@@ -157,13 +155,13 @@ public class InGameActivity extends AppCompatActivity
 
         brushChooserDLG.setContentView(R.layout.iga_brushsizechooser);
         brushChooserDLG.show();
-        //-----------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------
         //- SETUP THE BRUSH SIZE BUTTONS THAT THE USER CAN CHOOSE FROM
         ImageButton sizeBtn1 = (ImageButton) brushChooserDLG.findViewById(R.id.xsmall_brush);
         ImageButton sizeBtn2 = (ImageButton) brushChooserDLG.findViewById(R.id.small_brush);
         ImageButton sizeBtn3 = (ImageButton) brushChooserDLG.findViewById(R.id.medium_brush);
         ImageButton sizeBtn4 = (ImageButton) brushChooserDLG.findViewById(R.id.large_brush);
-        //-----------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------
         //-USER CHOSE THE XSMALL BRUSH
         sizeBtn1.setOnClickListener(new View.OnClickListener()
         {
@@ -210,11 +208,11 @@ public class InGameActivity extends AppCompatActivity
         });
         }
 
-    //============================================================================================
+    //==============================================================================================
     //-ERASE BUTTON
     public void EraseButton(View v)
         {
-        if(erase != true)
+        if(!erase)
             {
             erase = true;
             drawView.setErase(true);
@@ -226,7 +224,7 @@ public class InGameActivity extends AppCompatActivity
             }
         }
 
-    //============================================================================================
+    //==============================================================================================
     //-NEW BUTTON
     /*
     STARTED - 1/5/16
@@ -258,12 +256,12 @@ public class InGameActivity extends AppCompatActivity
         newDialog.show();
 
         //-TURN OFF ERASE IF ITS ON
-        if(erase == true)
+        if(erase)
             {
             drawView.setErase(false);
             }
         }
-    //=============================================================================================
+    //==============================================================================================
     //-SAVE BUTTON
     /*
     STARTED - 1/5/16
@@ -282,8 +280,8 @@ public class InGameActivity extends AppCompatActivity
         {
         public void onClick(DialogInterface dialog, int which)
             {
-            drawView.setDrawingCacheEnabled(true);
-            Bitmap b = drawView.getDrawingCache();
+            //drawView.setDrawingCacheEnabled(true);
+            //Bitmap b = drawView.getDrawingCache();
             //            FileOutputStream fos = null;
             //            try
             //                {
@@ -343,19 +341,13 @@ public class InGameActivity extends AppCompatActivity
         decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                //| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
     //############################################################################################
-    //-DEBUG CODE
-//    //-SHOW THE TEXT FOR DEBUGGING
-//    public void DisplayTestText(String t)
-//        {
-//        testDisplay.setText(t);
-//        }
+    //-DEBUG CODE:
+
     //############################################################################################
-    //- UNUSED CODE -//
     }
-//-i dont know what a branch is
 //#################################################################################################
