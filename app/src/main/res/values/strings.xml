@@ -3,6 +3,8 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Welcome to Comic Collaboration</string>
     <string name="text1">Comic Collaboration</string>
+    <string name="app_name2">Comic Collaboration</string>
+    <string name="companyname">BIG</string>
 
     <string name="welcome_text">Welcome</string>
     <string name="username_text">User Name</string>
