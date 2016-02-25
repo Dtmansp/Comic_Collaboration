@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:src="@drawable/cc_logo"
+        android:src="@drawable/logo_cc"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/progressBar"
         android:layout_alignStart="@+id/progressBar" />
