@@ -25,7 +25,7 @@ public class WelcomeActivity extends Activity {
         findViewById(R.id.welcomeSubmitInfoButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(WelcomeActivity.this, InGameActivity.class));
+                startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
             }
         });
     }
