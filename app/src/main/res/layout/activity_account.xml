@@ -20,21 +20,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/usefacebook_text"
-        android:id="@+id/connectFacebook"
+        android:text="Display User Name"
+        android:id="@+id/userName"
         android:layout_below="@+id/textView7"
         android:layout_alignParentStart="true"
         android:layout_marginTop="35dp"
         android:backgroundTint="@android:color/holo_orange_light" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Use Google to Login"
-        android:id="@+id/connectGooglePlay"
-        android:layout_below="@+id/connectFacebook"
-        android:layout_alignParentStart="true"
-        android:backgroundTint="@android:color/holo_blue_light" />
 
     <Button
         android:layout_width="wrap_content"
