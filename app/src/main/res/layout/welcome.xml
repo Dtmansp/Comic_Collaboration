@@ -19,12 +19,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="#000000"
-        android:paddingBottom="8dp" />
+        android:paddingBottom="16dp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Please enter a user name and password or login using Google or FaceBook"
+        android:text="Please enter a user name and password"
         android:id="@+id/welcomeInstructText"
         android:layout_below="@+id/welcomeText"
         android:layout_alignParentRight="true"
@@ -80,7 +80,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="Login"
         android:id="@+id/welcomeSubmitInfoButton"
         android:hint="you must agree to the terms and conditions of this app before signing in"
         android:enabled="true"
@@ -90,26 +90,24 @@
         android:layout_alignLeft="@+id/welcomePasswordText"
         android:layout_alignStart="@+id/welcomePasswordText" />
 
-    <CheckBox
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Accept Terms and Conditions"
-        android:id="@+id/tandSWelcomeCheck"
-        android:layout_above="@+id/welcomePasswordText"
+        android:text="How to Play"
+        android:id="@+id/buttonHelpWelcome"
+        android:layout_alignBottom="@+id/welcomePasswordText"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:checked="false"
-        android:hint="you must agree to the terms and conditions of this app before playing" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Help"
-        android:id="@+id/buttonHelpWelcome"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="34dp" />
+        android:text="Register to Create a User Login"
+        android:id="@+id/gotoRegistrationButton"
+        android:layout_below="@+id/welcomeSubmitInfoButton"
+        android:layout_alignLeft="@+id/welcomeInstructText"
+        android:layout_alignStart="@+id/welcomeInstructText"
+        android:layout_marginTop="33dp" />
 
 
 </RelativeLayout>
