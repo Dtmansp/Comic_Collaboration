@@ -110,7 +110,7 @@ public class DrawingView extends View
         {
         //set erase true or false
         erase = isErase;
-        //-SET THE COLOR TO WHITE FOR ERASEING
+        //-SET THE COLOR TO WHITE FOR ERASING
         drawPaint.setColor(0xFFFFFFFF);
         //		if(erase)
         //			{
