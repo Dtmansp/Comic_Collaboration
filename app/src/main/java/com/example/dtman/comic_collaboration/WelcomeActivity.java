@@ -28,12 +28,7 @@ public class WelcomeActivity extends Activity {
                 startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
             }
         });
-        findViewById(R.id.tandSWelcomeCheck).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(WelcomeActivity.this, terms_conditions.class));
-            }
-        });
+
         findViewById(R.id.buttonHelpWelcome).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
