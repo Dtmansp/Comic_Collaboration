@@ -82,7 +82,7 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:id="@+id/welcomeSubmitInfoButton"
-        android:hint="you must agree to the terms and conditions of this app before signing in"
+        android:hint="you must register to get a login"
         android:enabled="true"
         android:layout_below="@+id/welcomePasswordEditText"
         android:layout_alignParentRight="true"
