@@ -35,6 +35,13 @@ public class WelcomeActivity extends Activity {
                 startActivity(new Intent(WelcomeActivity.this, Help.class));
             }
         });
+        findViewById(R.id.gotoRegistrationButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
+            }
+        });
+
     }
 
     @Override
